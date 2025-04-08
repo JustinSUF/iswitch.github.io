@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSwitch Emulator UI</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        #logo {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        input, button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <h1>iSwitch Emulator</h1> <!-- Placeholder for your logo -->
+        <img src="IMG_6276.png" alt="">
+    </div>
+    <div class="container">
+        <input type="text" placeholder="Enter Keys" id="keysInput">
+        <input type="text" placeholder="Enter Switch Firmware Path" id="firmwareInput">
+        <input type="text" placeholder="Enter ROM Path" id="romInput">
+        <button id="runButton">Run</button>
+    </div>
+
+    <script>
+        document.getElementById('runButton').addEventListener('click', function() {
+            const keys = document.getElementById('keysInput').value;
+            const firmware = document.getElementById('firmwareInput').value;
+            const rom = document.getElementById('romInput').value;
+
+            console.log("Keys:", keys);
+            console.log("Firmware:", firmware);
+            console.log("ROM:", rom);
+
+            alert("Emulator is running (This is a placeholder action)");
+        });
+    </script>
+</body>
+</html>
